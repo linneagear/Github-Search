@@ -18,34 +18,34 @@
 }
 
 .repos>.list-group {
-  border: 1px solid #408BB0;
+  border: 1px solid #397492;
 }
 .btn-bd-primary{
-  background-color: #408BB0;
+  background-color: #397492;
   font-weight:500;
   color:white;
 }
 .btn-bd-primary:hover{
   background-color: white !important;
   font-weight:500;
-  color:#408BB0 !important;
-  border:1px solid #408BB0 !important;
+  color:#2c6b8a !important;
+  border:1px solid #397492 !important;
 }
 .btn-outline-bd-primary{
-  border:1px solid #408BB0;
-  color: #408BB0;
+  border:1px solid #397492;
+  color: #397492;
   font-weight:500;
 }
 .btn-outline-bd-primary:hover{
-  border:1px solid #408BB0;
-  background-color: #408BB0 !important;
+  border:1px solid #397492;
+  background-color: #397492 !important;
   color:white !important;
 }
 .repos>.list-group-item {
-  border: 1px solid #408BB0;
+  border: 1px solid #397492;
 }
 .commits>ul>.list-group-item {
-  border-bottom: 1px solid #949494;
+  border-bottom: 1px solid #397492;
 }
 .width-100{
   width:100vh;

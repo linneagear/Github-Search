@@ -6,7 +6,7 @@ import {CommitList, CommitListItem} from "./components/CommitList";
 
 function App() {
   // https://api.github.com/
-  const octokit = new Octokit({ auth: "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" });
+  const octokit = new Octokit({ auth: process.env.REACT_APP_TOKEN });
 
   const [users, setUsers] = useState([]);
   const [userSearch, setUserSearch] = useState("");

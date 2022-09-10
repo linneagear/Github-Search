@@ -4,7 +4,7 @@
 Using the Github API, user is able to search for a Github user's repositories, and see their commits.
 
 Able to use locally, not yet publically built. 
-[View youtube of basic functionality ↗️](https://)
+[View youtube of basic functionality ↗️](https://youtu.be/uWWrZAwHvjM)
 
 ## Technology Used:
 - HTML
