@@ -10,9 +10,9 @@ export function RepoListItem({
 })  {
     return (
         <li className="list-group-item">
-            <div className="row">
-               <div className="col-xs-12 text-center">
-                  <button className="btn btn-primary repo-button" value={title} onClick={onClick}>{title}</button>
+            <div className="row text-left">
+               <div className="col-xs-12">
+                  <button className="btn btn-outline-bd-primary repo-button" value={title} onClick={onClick}>{title}</button>
                 </div>
             </div>
             <div className="row text-left">

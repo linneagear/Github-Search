@@ -13,9 +13,46 @@
   }
 }
 
+.text-left {
+  text-align:left;
+}
+
+.repos>.list-group {
+  border: 1px solid #408BB0;
+}
+.btn-bd-primary{
+  background-color: #408BB0;
+  font-weight:500;
+  color:white;
+}
+.btn-bd-primary:hover{
+  background-color: white !important;
+  font-weight:500;
+  color:#408BB0 !important;
+  border:1px solid #408BB0 !important;
+}
+.btn-outline-bd-primary{
+  border:1px solid #408BB0;
+  color: #408BB0;
+  font-weight:500;
+}
+.btn-outline-bd-primary:hover{
+  border:1px solid #408BB0;
+  background-color: #408BB0 !important;
+  color:white !important;
+}
+.repos>.list-group-item {
+  border: 1px solid #408BB0;
+}
+.commits>ul>.list-group-item {
+  border-bottom: 1px solid #949494;
+}
+.width-100{
+  width:100vh;
+}
 .App-header {
-  background-color: #282c34;
-  min-height: 10vh;
+  background-color: #408BB0;
+  min-height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;

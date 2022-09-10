@@ -6,7 +6,7 @@ import {CommitList, CommitListItem} from "./components/CommitList";
 
 function App() {
   // https://api.github.com/
-  const octokit = new Octokit({ auth: "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" });
+  const octokit = new Octokit({ auth: "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" });
 
   const [users, setUsers] = useState([]);
   const [userSearch, setUserSearch] = useState("");
@@ -14,7 +14,7 @@ function App() {
   const [commits, setCommits] = useState([]);
   
   const handleInputChange = event => {
-    // Update the appropriate state
+  // Update the appropriate state
     const { value } = event.target;
     setUserSearch(value);
   };
@@ -31,6 +31,7 @@ function App() {
     const value  = e.target.value;
     getCommits(value);
   };
+
 
   async function getUsers(input) {
         // get all repos from the searched user
@@ -54,7 +55,6 @@ async function getCommits(repoData) {
         .catch(err => console.log(err));
 }
 
-
 // TO DO - add more checkpoints
 // 1. If user does not have any repos
 // 2. If user cannot be found
@@ -63,23 +63,24 @@ async function getCommits(repoData) {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Start by searching a Github User, to see their repos and commits!</h1>
+        <h1 className="width-100">Start by searching a Github User, to see their repos and commits!</h1>
       </header>
+      <div className="container">
       <div className="row m-4">
-        <div class="col-md-8 col-xs-12">
+        <div class="col-xs-12">
           <form>
         <div className="input-group">
             <label for="username" className="p-2">Github User: </label>
             <input id="username" type="text" className="form-control" value={userSearch} onChange={handleInputChange} placeholder="Search by username" aria-label="Search a Github user" />
-            <button className="btn btn-primary" type="button" id="search-users" onClick={handleSearch}>Search</button>
-            {/* <button className="btn btn-outline-primary" type="button" id="clear-all">Clear</button> */}
+            <button className="btn btn-bd-primary" type="button" id="search-users" onClick={handleSearch}>Search</button>
+            {/* <button className="btn btn-outline-primary" type="button" onClick={clearAll}>Clear</button> */}
           </div>
         </form>
         </div>
       </div>
 
       <div className="row">
-        <div className="col-xs-12 col-sm-5">
+        <div className="col-xs-12 col-sm-6">
           {/* Retrieved commits data will be dumped here */}
           <div className="repos">
              {/* will show ul list of repos */}
@@ -98,7 +99,7 @@ async function getCommits(repoData) {
             
           </div>
         </div>
-        <div className="left-nav col-xs-12 col-sm-4">
+        <div className="left-nav col-xs-12 col-sm-6">
           {/* Retrieved commits data will be dumped here */}
           <div className="commits">
           {!commits.length ? (
@@ -110,7 +111,7 @@ async function getCommits(repoData) {
                     <CommitListItem
                       key={commitName._id}
                       message={commitName.commit.message}
-                      date={commitName.commit.author.date}
+                      // date={commitName.commit.author.date}
                     />
                   );
                 })}
@@ -118,6 +119,7 @@ async function getCommits(repoData) {
           )}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
